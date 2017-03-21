@@ -9,6 +9,7 @@ package exercicioescola;
  *
  * @author joaomferreira
  */
-public class Pagavel {
+public interface Pagavel {
     
+    abstract float calculoPagamento();
 }

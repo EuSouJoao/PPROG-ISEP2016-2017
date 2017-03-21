@@ -23,7 +23,6 @@ public class ExercicioESCOLA {
         membros[4] = new Docente("Conceição Neves", 3000, "Coordenador");
         
         
-
     }
     
 }
