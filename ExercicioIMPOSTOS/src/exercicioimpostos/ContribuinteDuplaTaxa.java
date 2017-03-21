@@ -16,7 +16,7 @@ public class ContribuinteDuplaTaxa extends Contribuinte {
         super(nome, email, outrosRendimentos);
         this.rendimentoTrabalho = rendimentoTrabalho;
     }
-    
+
     public ContribuinteDuplaTaxa(){
         super();
     }
@@ -37,5 +37,17 @@ public class ContribuinteDuplaTaxa extends Contribuinte {
     @Override
     public float calculoImposto() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+    public boolean equals(Object obj){
+        if (!super.equals(obj)){
+            return false;
+        }
+        ContribuinteDuplaTaxa ola = (ContribuinteDuplaTaxa) obj;
+        if (this.rendimentoTrabalho != ola.rendimentoTrabalho) {
+            return false;
+        }
+        return true;
     }
 }

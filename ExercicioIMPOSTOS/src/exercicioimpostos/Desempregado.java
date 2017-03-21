@@ -43,5 +43,18 @@ public class Desempregado extends Contribuinte {
     public float calculoImposto() {
         return getOutrosRendimentos() * (taxaOR / 100);
     }
+    
+    @Override
+    public boolean equals(Object obj){
+        if (!super.equals(obj)){
+            return false;
+        }
+        Desempregado ola = (Desempregado) obj;
+        if (this.mesesDeParagem != ola.mesesDeParagem) {
+            return false;
+        }
+        return true;
+        
+    }
 
 }

@@ -61,4 +61,13 @@ public abstract class Contribuinte {
    
    public abstract float calculoImposto();
    
+   @Override
+   public boolean equals(Object obj){
+       if (this == obj) return true;
+       if (obj == null || this.getClass() != obj.getClass()) return false;
+       Contribuinte ola = (Contribuinte) obj;
+       if (!this.getNome().equalsIgnoreCase(ola.getNome()) || this.getOutrosRendimentos() != ola.getOutrosRendimentos() || !this.getEmail().equalsIgnoreCase(ola.getEmail()) ) return false;
+       return true;
+   }
+   
 }

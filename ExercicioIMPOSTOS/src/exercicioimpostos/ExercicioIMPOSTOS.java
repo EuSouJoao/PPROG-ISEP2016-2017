@@ -17,7 +17,8 @@ public class ExercicioIMPOSTOS {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList<Contribuinte> contribuintes;
+        ArrayList<Contribuinte> contribuintes = new ArrayList<Contribuinte>();
+        
         contribuintes.add(new Desempregado("Lito Vidal", "Lisboa", 230, 1));
         contribuintes.add(new Reformado("Valter Cubilhas", "Olival", 600, 400));
         contribuintes.add(new Desempregado("Paulo Santos", "Braga", 150, 4));
@@ -29,6 +30,9 @@ public class ExercicioIMPOSTOS {
         contribuintes.add(new TCOutrem("João", "Lisboa", 800, 100, "CML"));
         contribuintes.add(new TCPropria("Carla", "Porto", 15000, 1000, "Advogado"));
         contribuintes.add(new Desempregado("Maria Sá", "Afife", 230, 8));
+        
+        for (Contribuinte contribuinte : contribuintes) {
+            System.out.println(contribuinte.getNome() + " - " + contribuinte.getEmail());
+        }
     }
-
 }

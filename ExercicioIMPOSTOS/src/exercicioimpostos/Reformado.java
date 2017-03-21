@@ -47,4 +47,11 @@ public class Reformado extends ContribuinteDuplaTaxa {
     public float calculoImposto(){
         return getRendimentoTrabalho() * (taxaRT / 100) + getOutrosRendimentos() * (taxaOR / 100);
     }
+    
+    @Override
+    public boolean equals(Object obj){
+        if (!super.equals(obj)){
+            return false;
+        } else return true;
+    }
 }

@@ -12,7 +12,7 @@ package exercicioimpostos;
 public class TCPropria extends ContribuinteDuplaTaxa {
 
     private String profissao;
-    private static int taxaOR;
+    private int taxaOR;
     private static int taxaRT = 3;
 
     private static final int LIMIAR_OR = 50000;
@@ -32,7 +32,7 @@ public class TCPropria extends ContribuinteDuplaTaxa {
 
     }
 
-    public static int getTaxaOR() {
+    public int getTaxaOR() {
         return taxaOR;
     }
 
@@ -50,5 +50,10 @@ public class TCPropria extends ContribuinteDuplaTaxa {
 
     public int calcularTaxaOR() {
         return (getOutrosRendimentos() <= LIMIAR_OR) ? 2 : 5;
+    }
+    
+    @Override
+    public boolean equals(Object obj){
+        
     }
 }
